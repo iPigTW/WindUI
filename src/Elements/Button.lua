@@ -24,20 +24,6 @@ function Element:New(Config)
         Hover = true,
     })
     
-    Button.UIElements.ButtonIcon = New("ImageLabel",{
-        Image = Creator.Icon("mouse-pointer-click")[1],
-        ImageRectOffset = Creator.Icon("mouse-pointer-click")[2].ImageRectPosition,
-        ImageRectSize = Creator.Icon("mouse-pointer-click")[2].ImageRectSize,
-        BackgroundTransparency = 1,
-        Parent = Button.ButtonFrame.UIElements.Main,
-        Size = UDim2.new(0,20,0,20),
-        AnchorPoint = Vector2.new(1,0.5),
-        Position = UDim2.new(1,0,0.5,0),
-        ImageColor3 = Color3.fromHex(Config.Theme.Text),
-        ThemeTag = {
-            ImageColor3 = "Text"
-        }
-    })
     
     function Button:Lock()
         CanCallback = false
